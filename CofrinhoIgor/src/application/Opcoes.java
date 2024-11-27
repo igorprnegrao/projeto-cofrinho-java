@@ -27,11 +27,13 @@ public class Opcoes {
 		
 		switch (selecionarOpcao) {
 		case "0":
+			System.out.println("PROGRAMA ENCERRADO...");
 			break;
 		
 
 		default:
 			System.out.println("OPÇÃO INVÁLIDA!");
+			exibirOpcoes();
 			break;
 		}
 		
