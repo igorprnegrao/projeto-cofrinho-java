@@ -29,8 +29,12 @@ public class Opcoes {
 		case "0":
 			System.out.println("PROGRAMA ENCERRADO...");
 			break;
-		
-
+		case "1":
+			System.out.println("ESCOLHA A MOED: ");
+			System.out.println("1 - REAL:");
+			System.out.println("2 - DOLAR:");
+			System.out.println("3 - EURO:");
+			break;
 		default:
 			System.out.println("OPÇÃO INVÁLIDA!");
 			exibirOpcoes();
