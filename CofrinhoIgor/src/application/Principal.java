@@ -3,7 +3,8 @@ package application;
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Opcoes menu = new Opcoes();
+		menu.exibirOpcoes();
 
 	}
 

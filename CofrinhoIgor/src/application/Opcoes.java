@@ -8,6 +8,7 @@ public class Opcoes {
 		System.out.println("2 - REMOVER MOEDA: ");
 		System.out.println("3 - LISTAR MOEDAS: ");
 		System.out.println("4 - CONVERTER PARA REAL: ");
+		System.out.println("0 - ENCERRAR");
 		
 	}
 }
