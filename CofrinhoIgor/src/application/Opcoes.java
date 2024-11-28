@@ -1,16 +1,22 @@
 package application;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Opcoes {
 	
 	private Scanner sc;
+	private Cofrinho cofrinho;
+	
 	
 	public Opcoes() {
 		sc = new Scanner(System.in);
+		cofrinho = new Cofrinho();
+		
 	}
 	
 	public void exibirOpcoes() {
+		Locale.setDefault(Locale.US);
 		System.out.println("==========================");
 		System.out.println("     COFRINHO DO IGOR");
 		System.out.println("==========================");
@@ -30,10 +36,21 @@ public class Opcoes {
 			System.out.println("PROGRAMA ENCERRADO...");
 			break;
 		case "1":
-			System.out.println("ESCOLHA A MOED: ");
+			System.out.println("==========================");
+			System.out.println();
+			System.out.println("ESCOLHA A MOEDA: ");
+			System.out.println("==========================");
 			System.out.println("1 - REAL:");
 			System.out.println("2 - DOLAR:");
 			System.out.println("3 - EURO:");
+			System.out.println("==========================");
+			System.out.print("SELECIONE A OPÇÃO: ");
+			int selecionarMoeda = sc.nextInt();
+			System.out.println("==========================");
+			System.out.print("DIGITE O VALOR: ");
+			double valorMoeda = sc.nextDouble();
+			
+			exibirOpcoes();
 			break;
 		default:
 			System.out.println("OPÇÃO INVÁLIDA!");
