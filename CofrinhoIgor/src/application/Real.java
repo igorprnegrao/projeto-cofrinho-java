@@ -1,7 +1,10 @@
 package application;
 
-public class Real extends Moeda {
 
+public class Real extends Moeda {
+	
+	
+	
 	
 	public Real(double valor){
 		this.valor = valor;

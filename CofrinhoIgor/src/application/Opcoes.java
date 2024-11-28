@@ -10,13 +10,14 @@ public class Opcoes {
 	
 	
 	public Opcoes() {
+		Locale.setDefault(Locale.US);
 		sc = new Scanner(System.in);
 		cofrinho = new Cofrinho();
 		
 	}
 	
 	public void exibirOpcoes() {
-		Locale.setDefault(Locale.US);
+		
 		System.out.println("==========================");
 		System.out.println("     COFRINHO DO IGOR");
 		System.out.println("==========================");
@@ -44,11 +45,29 @@ public class Opcoes {
 			System.out.println("2 - DOLAR:");
 			System.out.println("3 - EURO:");
 			System.out.println("==========================");
+			
 			System.out.print("SELECIONE A OPÇÃO: ");
 			int selecionarMoeda = sc.nextInt();
 			System.out.println("==========================");
+			
 			System.out.print("DIGITE O VALOR: ");
 			double valorMoeda = sc.nextDouble();
+			
+			if (selecionarMoeda == 1){
+				Real moeda = new Real(valorMoeda);
+				cofrinho.adcionar(moeda);
+				System.out.println("Adicionado !!!");
+			} else if(selecionarMoeda == 2){
+				Dolar moeda = new Dolar(valorMoeda);
+				cofrinho.adcionar(moeda);
+				System.out.println("Adicionado !!!");
+			} else if(selecionarMoeda == 3){
+				Euro moeda = new Euro(valorMoeda);
+				cofrinho.adcionar(moeda);
+				System.out.println("Adicionado !!!");
+			} else {
+				System.out.println("Não existe essa moeda");
+			}
 			
 			exibirOpcoes();
 			break;
