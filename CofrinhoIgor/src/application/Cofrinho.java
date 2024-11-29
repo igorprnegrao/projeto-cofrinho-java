@@ -16,11 +16,36 @@ public class Cofrinho {
 		this.listaMoedas.add(moeda);
 	}
 	
-	public void listagemMoedas() {
-		for (Moeda moeda : listaMoedas) {
-			moeda.info();
-		}
+	public void remover(Moeda moeda) {
+		this.listaMoedas.remove(moeda);
 	}
 	
+	public void listagemMoedas() {
+		if (this.listaMoedas.isEmpty()) {
+			System.out.println("COFRINHO SEM MOEDAS!");
+			
+		} else {
+			for (Moeda moeda : listaMoedas) {
+				moeda.info();
+			}
+		}
+		
+	}
+	
+	public double converter() {
+		
+		double valorAcumulado = 0;
+		
+		if (this.listaMoedas.isEmpty()) {
+			System.out.println("COFRINHO SEM MOEDAS!");
+		}
+		
+		
+		for (Moeda moeda : this.listaMoedas) {
+			valorAcumulado += moeda.conveter();
+		}
+		
+		return valorAcumulado;
+	}
 	
 }
